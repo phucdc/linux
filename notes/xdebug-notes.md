@@ -1,7 +1,5 @@
 # Xdebug notes
 
----
-
 - `99-xdebug.ini`:
 
 ```ini

@@ -1,7 +1,5 @@
 # Some useful tools
 
----
-
 - [Kali-Mirrorscript](https://github.com/padsalatushal/Kali-Mirrorscript): a tool for get fastest mirrors for your Kali machine like `reflector` in Arch-based Distros.
 
 - [Waydroid](https://docs.waydro.id/usage/install-on-desktops): Android VM that runs with Wayland support.
