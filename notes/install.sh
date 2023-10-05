@@ -4,7 +4,7 @@ function prerequisite() {
     printf "=====[Prerequisite]=====\n"
     apt-get update -y -qq &&
     apt-get install -y apt-utils autoconf automake build-essential git libcurl4-openssl-dev libgeoip-dev liblmdb-dev libpcre++-dev libtool libxml2-dev libyajl-dev pkgconf wget zlib1g-dev -qq > /dev/null 2>&1 &&
-    echo "-----[Done]-----\n\n"
+    printf "-----[Done]-----\n\n"
 }
 
 function modsec3() {
