@@ -38,6 +38,7 @@ function configure() {
     mv /etc/nginx/modsec/modsecurity.conf-recommended /etc/nginx/modsec/modsecurity.conf &&
     cp ModSecurity/unicode.mapping /etc/nginx/modsec &&
     sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' /etc/nginx/modsec/modsecurity.conf &&
+    sed -i 's,SecAuditEngine RelevantOnly,SecAuditEngine On,g' /etc/nginx/modsec/modsecurity.conf &&
     wget -P /etc/nginx/modsec/ https://raw.githubusercontent.com/phucdc/linux/main/notes/main.conf &&
     echo -e '-----[Done]-----\n\n'
 }
@@ -61,3 +62,4 @@ function final() {
 
 cd /
 prerequisite && modsec3 && connector && configure && modsecurity_crs && final && curl 'http://localhost/?exec=/bin/bash'
+rm -rf /ModSecurity* /nginx* install.sh
